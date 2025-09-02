@@ -1,6 +1,40 @@
+import { Button } from "@/components/ui/button"
+import { Heart } from "lucide-react"
+import Link from "next/link"
+
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-background">
+      <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Heart className="h-8 w-8 text-primary" />
+            <Link href="/" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
+              ZeroHunger
+            </Link>
+          </div>
+          <nav className="hidden md:flex items-center gap-6">
+            <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+              About
+            </Link>
+            <Link href="/projects" className="text-muted-foreground hover:text-foreground transition-colors">
+              Projects
+            </Link>
+            <Link href="/impact" className="text-muted-foreground hover:text-foreground transition-colors">
+              Impact
+            </Link>
+          </nav>
+          <div className="flex items-center gap-3">
+            <Button variant="outline" asChild>
+              <Link href="/auth/login">Sign In</Link>
+            </Button>
+            <Button asChild>
+              <Link href="/auth/register">Get Started</Link>
+            </Button>
+          </div>
+        </div>
+      </header>
+
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <div className="prose prose-gray max-w-none">
           <h1 className="text-4xl font-bold text-foreground mb-8">Terms of Service</h1>
@@ -153,5 +187,6 @@ export default function TermsPage() {
         </div>
       </div>
     </div>
+       
   )
 }

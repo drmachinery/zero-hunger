@@ -139,15 +139,6 @@ export default function LoginPage() {
           </Button>
         </form>
 
-        <div className="mt-4 p-3 bg-muted rounded-lg">
-          <p className="text-sm font-medium mb-2">Demo Credentials:</p>
-          <div className="text-xs space-y-1">
-            <div>Donor: donor@example.com / password123</div>
-            <div>NGO: ngo@example.com / password123</div>
-            <div>Admin: admin@example.com / admin123</div>
-          </div>
-        </div>
-
         <div className="relative mt-6">
           <div className="absolute inset-0 flex items-center">
             <span className="w-full border-t" />
